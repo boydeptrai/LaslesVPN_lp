@@ -1,0 +1,33 @@
+.header {
+    padding-top: 50px;
+    padding-bottom: 90px;
+
+    &__container {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__auth {
+        display: flex;
+        align-items: center;
+        gap: 0 30px;
+        text-transform: capitalize;
+    }
+
+    &__signin {
+        font-weight: 500;
+        color: var(--heading-color);
+    }
+
+    @media screen and (max-width: 1023.98px) {
+        padding: 25px 0 50px;
+
+        &__auth {
+            display: none;
+        }
+    
+    }
+
+}
+

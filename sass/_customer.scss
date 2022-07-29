@@ -1,0 +1,128 @@
+.customer {
+    .boxed {
+        margin-bottom: 60px;
+    }
+
+    .heading {
+        max-width: 447px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // &__list {
+    //     display: grid;
+    //     grid-template-columns: repeat(3,1fr);
+    //     grid-gap: 0 50px ;
+    // }
+
+    &__item {
+        border: 2px solid var(--graydd);
+        border-radius: 10px;
+        padding: 30px;
+        margin: 0 25px;
+
+        &.slick-current.slick-active {
+            border-color: var(--primary-color);
+        }
+    }
+
+    &__top {
+        margin-bottom: 20px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+    }
+
+    &__avatar {
+        height: 50px;
+        width: 50px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 100rem;
+        }
+    }
+    
+    &__name {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        line-height: 1;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+    }
+
+    // slick slider 
+    .slick-track {
+        display: flex;
+        padding-bottom: 60px;
+    }
+
+    .slick-dots {
+        display: flex;
+        align-items: center;
+        gap: 0 15px;
+        transform: translateY(50%);
+
+        button {
+            font-size: 0;
+            background-color: var(--graye4);
+            height: 15px;
+            width: 15px;
+            border-radius: 100rem;
+            transition: all 0.2s linear;
+        }
+        .slick-active button {
+            background-color: var(--primary-color);
+            width: 45px;
+        }
+    }
+
+    .slick-arrow {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 100rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--primary-color);
+        bottom: 0;
+        transform: translateY(50%);
+        z-index: 10;
+    }
+
+    .slick-prev {
+        background: transparent;
+        right: 80px;
+    }
+    .slick-next {
+        background: var(--primary-color);
+        right: 0;
+    }
+    @media screen and (max-width: 1023.98px) {
+       .slick-track {
+           padding-bottom: 20px;
+       }
+
+       .slick-dots {
+           justify-content: center;
+       }
+
+       &__list {
+           padding-bottom: 50px;
+       }
+    }
+    
+}
